@@ -50,8 +50,31 @@ body {
 }
 
 /*header*/
+.page-header {
+  display: flex;
+  width: 100%;
+}
+
+.header-logo {
+  margin-left: 70px;
+}
+
 .navigation {
+  display: flex;
+  width: 100%;
   font-weight: 700;
+}
+
+.navigation-list {
+  margin: 0 0 0 30px;
+  padding: 0;
+  width: 450px;
+}
+
+.navigation-user {
+  width: 300px;
+  margin-right: 70px;
+  margin-left: auto;
 }
 
 .navigation-link {
