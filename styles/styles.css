@@ -60,17 +60,20 @@ body {
 }
 
 /*index*/
-
 .main-index {
   flex: 1 1 100%;
   text-align: center;
 }
 .welcome {
-  height: 458px;
   background-image: url(../images/welcome-background.jpg);
   background-repeat: no-repeat;
   background-color: #9ba4e5;
   background-size: 100% auto;
+}
+
+.welcome-logo {
+  display: block;
+  margin: 0 auto;
 }
 
 .advantages-promo {
