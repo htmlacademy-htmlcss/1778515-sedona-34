@@ -228,7 +228,17 @@ body {
  }
 
 /*footer*/
+.page-footer {
+  display: flex;
+}
+
+.footer-contacts-list {
+  margin: 0 0 0 72px;
+  padding: 0;
+}
+
 .footer-phone-number {
+  margin: 0 auto;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
@@ -238,6 +248,10 @@ body {
 .phone-number-link {
   text-decoration: none;
   color: #000;
+}
+
+.footer-html-academy-link {
+  margin: 0 72px 0 0;
 }
 
 /*catalog*/
