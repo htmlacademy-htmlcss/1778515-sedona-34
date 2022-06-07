@@ -87,6 +87,7 @@ body {
   flex: 1 1 100%;
   text-align: center;
 }
+
 .welcome {
   background-image: url(../images/welcome-background.jpg);
   background-repeat: no-repeat;
@@ -214,6 +215,10 @@ body {
  .subscribe-description {
    display: inline-block;
    width: 446px;
+ }
+
+ .subscribe-form input[type=email] {
+   font-family: "PT Sans", sans-serif;
  }
 
  .button-subscribe {
