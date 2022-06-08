@@ -14,10 +14,16 @@
   font-display: swap;
 }
 
+/*global*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 html {
@@ -257,6 +263,8 @@ body {
 
 /*catalog*/
 .catalog-header {
+  width: 100%;
+  padding: 35px 70px 70px 70px;
   background-image: url(../images/catalog-background.jpg);
   background-repeat: no-repeat;
   background-color: #396487;
@@ -265,17 +273,16 @@ body {
 }
 
 .catalog-title {
-  margin: 0 0 0 70px;
   padding: 0;
+  margin: 0;
   font-size: 60px;
   line-height: 78px;
 }
 
 .breadcrumbs {
-  margin: 0 0 0 70px;
   padding: 0;
+  margin: 0;
   list-style: none;
-
 }
 
 .breadcrumbs-link {
@@ -288,8 +295,18 @@ body {
 
 .catalog-filters-form {
   display: flex;
-  width: 1060px;
-  margin: 0 70px;
+  width: 100%;
+}
+
+.catalog-filters-form fieldset {
+  padding: 0;
+  border: none;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .catalog-filter-list {
@@ -341,13 +358,15 @@ body {
 .catalog-sort-select {
   width: 287px;
   margin:0 81px 0 191px;
+  font: inherit;
 }
 
 .catalog-sort-view-controls {
   display: flex;
 }
 
-.view-icon {
+.view-button {
+  display: block;
   padding: 17px 16px;
 }
 
@@ -356,9 +375,9 @@ body {
 }
 
 .catalog-hotels-list {
-  margin: 0 71px 0 73px;
+  margin: 0 72px;
   padding: 0;
-  width: 1056px;
+  width: 1057px;
 }
 
 .button-add-favorite {
@@ -371,14 +390,34 @@ body {
 
 .catalog-pages-controls {
   display: flex;
-  width: 1056px;
-  margin: 0 71px 0 73px;
+  width: 1057px;
+  margin: 0 72px;
   justify-content: space-between;
 }
 
 .catalog-pagination {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.catalog-pagination-item {
+  display: flex;
+}
+
+.catalog-pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.catalog-pagination-link {
+
+}
+
+.current-hotels-amount {
+  width: 160px;
+  height: 49px;
+  padding-left: 20px;
 }
 
 .catalog-subscribe {
