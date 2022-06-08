@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -48,16 +54,14 @@ body {
   color: rgba(255, 255, 255, 1);
   background-color: #756157;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 /*header*/
 .page-header {
   display: flex;
   width: 100%;
-}
-
-.header-logo {
-  margin-left: 70px;
+  padding: 0 70px;
 }
 
 .navigation {
@@ -74,7 +78,6 @@ body {
 
 .navigation-user {
   width: 300px;
-  margin-right: 70px;
   margin-left: auto;
 }
 
@@ -146,15 +149,14 @@ body {
 }
 
 .advantages-important-item-wrapper {
-  width: 400px;
-  height: 384px;
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 1);
 }
 
 .advantages-item {
-  width: 400px;
-  height: 384px;
+  max-width: 400px;
+  min-height: 384px;
+  padding: 10px;
 }
 
  .advantages-title {
@@ -220,6 +222,7 @@ body {
 
  .subscribe-form input[type=email] {
    font-family: "PT Sans", sans-serif;
+   padding-left: 22px;
  }
 
  .button-subscribe {
@@ -231,15 +234,16 @@ body {
 /*footer*/
 .page-footer {
   display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
 }
 
 .footer-contacts-list {
-  margin: 0 0 0 72px;
   padding: 0;
+  margin: 0;
 }
 
 .footer-phone-number {
-  margin: 0 auto;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
@@ -249,10 +253,6 @@ body {
 .phone-number-link {
   text-decoration: none;
   color: #000;
-}
-
-.footer-html-academy-link {
-  margin: 0 72px 0 0;
 }
 
 /*catalog*/
