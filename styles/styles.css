@@ -115,6 +115,10 @@ body {
   line-height: 26px;
 }
 
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
+}
+
 .navigation-user .navigation-link {
   min-width: 19px;
   min-height: 19px;
@@ -146,7 +150,10 @@ body {
   background-image: url(../images/welcome-background.jpg);
   background-repeat: no-repeat;
   background-color: #9ba4e5;
-  background-size: 100% auto;
+  background-size: cover;
+  padding-top: 51px;
+  padding-bottom: 82px;
+  margin-bottom: 63px;
 }
 
 .welcome-logo {
@@ -154,10 +161,14 @@ body {
   margin: 0 auto;
 }
 
+.advantages {
+  margin-bottom: 91px;
+}
+
 .advantages-promo {
   display: block;
-  width: 627px;
-  margin: 0 auto;
+  max-width: 627px;
+  margin: 0 auto 31px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -165,8 +176,8 @@ body {
 
 .advantages-subtitle {
   display: block;
-  width: 658px;
-  margin: 0 auto;
+  max-width: 658px;
+  margin: 0 auto 90px;
   font-size: 22px;
   line-height: 26px;
 }
@@ -198,21 +209,61 @@ body {
   order: -1;
 }
 
+.advantages-item {
+  max-width: 400px;
+  padding: 103px 85px 102px;
+}
+
 .advantages-important-item-wrapper {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 1);
+  padding-top: 92px;
+  padding-bottom: 92px;
 }
 
-.advantages-item {
-  max-width: 400px;
-  min-height: 384px;
-  padding: 10px;
+.advantages-special-list .advantages-item {
+  padding-top: 80px;
+  padding-bottom: 81px;
 }
 
  .advantages-title {
+   margin: 0 25px 81px 25px;
    font-size: 24px;
    line-height: 28px;
    text-transform: uppercase;
+ }
+
+ .advantages-special-list .advantages-title {
+   margin: 0 0 30px 0;
+ }
+
+ .home-title:before {
+   content: url("../images/icons/advantage-home-icon.svg");
+   display: block;
+   max-width: 75px;
+   max-height: 72px;
+   margin: 0 auto 30px;
+ }
+
+ .food-title:before {
+   content: url("../images/icons/advantage-burger-icon.svg");
+   display: block;
+   max-width: 74px;
+   max-height: 70px;
+   margin: 0 auto 30px;
+ }
+
+ .present-title:before {
+   content: url("../images/icons/advantage-present-icon.svg");
+   display: block;
+   max-width: 75px;
+   max-height: 72px;
+   margin: 0 auto 30px;
+ }
+
+ .advantages-description {
+   font: inherit;
+   margin: 0;
  }
 
  .advantages-image {
@@ -228,7 +279,7 @@ body {
  }
 
  .offer-title {
-   margin: 0;
+   margin: 0 0 29px 0;
    padding: 0;
    font-size: 30px;
    line-height: 36px;
@@ -238,7 +289,7 @@ body {
  .offer-description {
    display: block;
    width: 592px;
-   margin: 0 auto;
+   margin: 0 auto 56px;
    font-size: 22px;
    line-height: 26px;
  }
@@ -246,10 +297,11 @@ body {
  .button-offer {
    font-size: 20px;
    line-height: 36px;
+   margin:  0 auto 93px;
  }
 
  .subscribe {
-   height: 411px;
+   padding: 94px 200px;
    background-image: url("../images/subscribe-background.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -258,7 +310,7 @@ body {
  }
 
  .subscribe-title {
-   margin: 0;
+   margin: 0 0 29px 0;
    padding: 0;
    font-size: 30px;
    line-height: 36px;
@@ -266,19 +318,35 @@ body {
  }
 
  .subscribe-description {
-   display: inline-block;
-   width: 446px;
+   display: block;
+   margin: 0 auto 46px;
+   max-width: 446px;
+ }
+
+ .subscribe-form {
+   display: flex;
  }
 
  .subscribe-form input[type=email] {
-   font-family: "PT Sans", sans-serif;
-   padding-left: 22px;
+   flex-grow: 1;
+   font: inherit;
+   padding: 0 0 0 22px;
+   background: #F2F2F2;
+   border-radius: 10px 0 0 10px;
+   border: none;
+ }
+
+.subscribe-form input[type=email]::placeholder {
+  font: inherit;
  }
 
  .button-subscribe {
+   min-width: 200px;
+   padding: 12px 0;
    font-size: 20px;
    line-height: 36px;
    background-color: #82B3D3;
+   border-radius: 0 10px 10px 0;
  }
 
 /*footer*/
@@ -291,6 +359,8 @@ body {
 .footer-contacts-list {
   padding: 0;
   margin: 0;
+  list-style: none;
+  display: flex;
 }
 
 .footer-phone-number {
