@@ -637,6 +637,8 @@ body {
   padding: 0;
   list-style: none;
   display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
 }
 
 .catalog-hotel-card {
