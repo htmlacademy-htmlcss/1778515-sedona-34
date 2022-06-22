@@ -259,24 +259,24 @@ body {
  .home-title:before {
    content: url("../images/icons/advantage-home-icon.svg");
    display: block;
-   max-width: 75px;
-   max-height: 72px;
+   width: 75px;
+   height: 72px;
    margin: 0 auto 30px;
  }
 
  .food-title:before {
    content: url("../images/icons/advantage-burger-icon.svg");
    display: block;
-   max-width: 74px;
-   max-height: 70px;
+   width: 74px;
+   height: 70px;
    margin: 0 auto 30px;
  }
 
  .present-title:before {
    content: url("../images/icons/advantage-present-icon.svg");
    display: block;
-   max-width: 75px;
-   max-height: 72px;
+   width: 75px;
+   height: 72px;
    margin: 0 auto 30px;
  }
 
@@ -381,31 +381,38 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  place-items: center;
   max-width: 284px;
 }
 
 .footer-contacts-item {
+  display: block;
+  width: 47px;
+  height: 40px;
+}
+
+.footer-contacts-link {
   display: flex;
   width: 47px;
   height: 40px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.footer-contacts-vk-link {
-  padding: 13px 11px;
+.footer-contacts-link svg {
+  fill: #83B3D3;
 }
 
-.footer-contacts-telegram-link {
-  padding: 12px 14px;
+.footer-contacts-link:hover svg {
+  fill: #68A2CA;
 }
 
-.footer-contacts-youtube-link {
-  padding: 11px 12px;
+.footer-contacts-link:focus svg{
+  fill: #68A2CA;
 }
 
-.footer-contact-icon {
-  display: block;
+.footer-contacts-link:active svg {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-phone-number {
@@ -422,13 +429,37 @@ body {
   color: #000;
 }
 
+.phone-number-link:hover {
+  color: #756157;
+}
+
+.phone-number-link:focus {
+  color: #756157;
+}
+
+.phone-number-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .footer-html-academy-link {
-  display: block;
+  display: flex;
   padding: 8px 0;
 }
 
-.footer-html-academy-image {
-  display: block;
+.footer-html-academy-link svg {
+  fill: #000;
+}
+
+.footer-html-academy-link:hover svg {
+  fill: #756157;
+}
+
+.footer-html-academy-link:focus svg {
+  fill: #756157;
+}
+
+.footer-html-academy-link:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /*catalog*/
