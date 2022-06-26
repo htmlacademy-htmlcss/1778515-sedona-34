@@ -184,7 +184,12 @@ body {
 }
 
 .navigation-link:hover {
-  background-color: #e6eff4;
+  color: rgba(0, 0, 0, 0.51);
+}
+
+.navigation-link:focus {
+  outline: none;
+  color: rgba(0, 0, 0, 0.51);
 }
 
 .navigation-link-current {
@@ -192,7 +197,8 @@ body {
   padding-bottom: 17px;
 }
 
-.favorite-link, .search-link {
+.favorite-link,
+.search-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,6 +206,15 @@ body {
   padding: 0;
   min-width: 42px;
   min-height: 65px;
+}
+
+.navigation-link svg {
+  fill: #000;
+}
+
+.navigation-link:hover svg,
+.navigation-link:focus svg {
+  fill: rgba(0, 0, 0, 0.51);
 }
 
 .favorite-count {
@@ -444,6 +459,23 @@ body {
   font: inherit;
  }
 
+.subscribe-form input[type=email]:hover {
+  background-color: #e6e6e6e8;
+ }
+
+.subscribe-form input[type=email]:focus-visible {
+  outline: none;
+}
+
+.subscribe-form input[type=email]:focus {
+  background-color: #e6e6e6e8;
+ }
+
+.subscribe-form input[type=email]:disabled {
+  background-color: rgba(196, 196, 196, 0.64);
+  color: black;
+ }
+
  .button-subscribe {
    min-width: 200px;
    padding: 12px 0;
@@ -475,6 +507,10 @@ body {
   height: 40px;
   justify-content: center;
   align-items: center;
+}
+
+.footer-contacts-link:focus {
+  outline: none;
 }
 
 .footer-contacts-link svg {
@@ -512,6 +548,7 @@ body {
 }
 
 .phone-number-link:focus {
+  outline: none;
   color: #756157;
 }
 
@@ -522,6 +559,10 @@ body {
 .footer-html-academy-link {
   display: flex;
   padding: 8px 0;
+}
+
+.footer-html-academy-link:focus {
+  outline: none;
 }
 
 .footer-html-academy-link svg {
@@ -654,7 +695,6 @@ body {
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
 }
-
 
 .control-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/icons/checkbox-icon.svg");
