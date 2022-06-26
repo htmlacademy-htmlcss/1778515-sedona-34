@@ -83,11 +83,8 @@ body {
   background-color: #756157;
 }
 
-.button-redirect:hover {
-  background-color: #615048;
-}
-
-.button-redirect:focus {
+.button-redirect:hover,
+.button-redirect:focus{
   background-color: #615048;
 }
 
@@ -100,10 +97,7 @@ body {
   background-color: #82B3D3;
 }
 
-.button-action:hover {
-  background-color: #68A2CA;
-}
-
+.button-action:hover,
 .button-action:focus {
   background-color: #68A2CA;
 }
@@ -117,10 +111,7 @@ body {
   background-color: #7DB54F;
 }
 
-.button-selected:hover {
-  background-color: #6C9E42;
-}
-
+.button-selected:hover,
 .button-selected:focus {
   background-color: #6C9E42;
 }
@@ -128,6 +119,18 @@ body {
 .button-selected:active {
   background-color: #7DB54F;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: #e5e5e5;
+}
+
+.button-disabled,
+.button-disabled:hover{
+  background-color: #e5e5e5;
+  cursor: default;
+  pointer-events: none;
 }
 
 /*header*/
