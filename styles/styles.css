@@ -183,6 +183,10 @@ body {
   line-height: 26px;
 }
 
+.navigation-link:hover {
+  background-color: #e6eff4;
+}
+
 .navigation-link-current {
   border-bottom: 2px solid #756257;
   padding-bottom: 17px;
@@ -622,9 +626,71 @@ body {
   width: 100%;
 }
 
-.catalog-filters-form fieldset {
+.catalog-filter-group {
   padding: 0;
   border: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.control {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url("../images/icons/checkbox-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+}
+
+.catalog-filter-group-infrastructure .control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-group-infrastructure .control:active .control-mark {
+  background-color:  rgba(255, 255, 255, 0.3);
+}
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control-input:disabled + .control-mark {
+  background-color: #919191;
+}
+
+.control-input:disabled:hover + .control-mark {
+  background-color: #919191;
 }
 
 .catalog-filter-title {
@@ -633,15 +699,15 @@ body {
   font-weight: 700;
 }
 
-.catalog-filters-group-infrastructure .catalog-filter-title {
+.catalog-filter-group-infrastructure .catalog-filter-title {
   margin-bottom: 30px;
 }
 
-.catalog-filters-group-type .catalog-filter-title {
+.catalog-filter-group-type .catalog-filter-title {
   margin-bottom: 30px;
 }
 
-.catalog-filters-group-price .catalog-filter-title {
+.catalog-filter-group-price .catalog-filter-title {
   margin-bottom: 34px;
 }
 
@@ -655,16 +721,16 @@ body {
   margin-bottom: 15px;
 }
 
-.catalog-filters-group-infrastructure {
+.catalog-filter-group-infrastructure {
   width: 151px;
   margin: 0 70px 0 0;
 }
 
-.catalog-filters-group-type {
+.catalog-filter-group-type {
   width: 146px;
 }
 
-.catalog-filters-group-price {
+.catalog-filter-group-price {
   width: 288px;
   margin: 0 70px 0 auto;
 }
