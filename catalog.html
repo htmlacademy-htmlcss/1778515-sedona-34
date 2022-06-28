@@ -60,7 +60,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Гостиницы</a>
+            <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ol>
         <section class="catalog-filters">
@@ -122,23 +122,23 @@
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="controls-price-wrapper">
                 <label class="control-min-price">
-                  <input class="control-price-input" type="number" name="min-price" value="0">
+                  <input class="control-price-input" type="number" name="min-price" value="0" placeholder="0">
                   <span class="control-price-label">от</span>
                 </label>
                 <label class="control-max-price">
-                  <input class="control-price-input" type="number" name="max-price" value="9000">
+                  <input class="control-price-input" type="number" name="max-price" value="9000" placeholder="9000">
                   <span class="control-price-label">до</span>
                 </label>
               </div>
               <div class="range-price-wrapper">
-                <input class="catalog-filter-slider slider-min" type="range" name="range-price" id="range-price-min"
+                <input class="control-price-range" type="range" name="range-price" id="range-price-min"
                        min="0" max="12000"
                        value="0">
-                <label for="range-price-min" class="visually-hidden">Слайдер выбора цены</label>
-                <input class="catalog-filter-slider slider-max" type="range" name="range-price" id="range-price-max"
+                <label for="range-price-min" class="visually-hidden">Минимальная цена</label>
+                <input class="control-price-range price-max" type="range" name="range-price" id="range-price-max"
                        min="0" max="12000"
                        value="9000">
-                <label for="range-price-max" class="visually-hidden">Слайдер выбора цены</label>
+                <label for="range-price-max" class="visually-hidden">Максимальная цена</label>
               </div>
             </fieldset>
             <div class="form-buttons-container">
