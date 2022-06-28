@@ -120,13 +120,26 @@
             </fieldset>
             <fieldset class="catalog-filter-group catalog-filter-group-price">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <input type="text" name="min-price" id="min-price" placeholder="от" value="0">
-              <label for="min-price" class="visually-hidden">Минимальная цена</label>
-              <input type="text" name="max-price" id="max-price" placeholder="до" value="9000">
-              <label for="max-price" class="visually-hidden">Максимальная цена</label>
-              <input type="range" class="catalog-filter-slider" name="range-price" id="range-price" min="0" max="12000"
-                     value="9000">
-              <label for="range-price" class="visually-hidden">Слайдер выбора цены</label>
+              <div class="controls-price-wrapper">
+                <label class="control-min-price">
+                  <input class="control-price-input" type="number" name="min-price" value="0">
+                  <span class="control-price-label">от</span>
+                </label>
+                <label class="control-max-price">
+                  <input class="control-price-input" type="number" name="max-price" value="9000">
+                  <span class="control-price-label">до</span>
+                </label>
+              </div>
+              <div class="range-price-wrapper">
+                <input class="catalog-filter-slider slider-min" type="range" name="range-price" id="range-price-min"
+                       min="0" max="12000"
+                       value="0">
+                <label for="range-price-min" class="visually-hidden">Слайдер выбора цены</label>
+                <input class="catalog-filter-slider slider-max" type="range" name="range-price" id="range-price-max"
+                       min="0" max="12000"
+                       value="9000">
+                <label for="range-price-max" class="visually-hidden">Слайдер выбора цены</label>
+              </div>
             </fieldset>
             <div class="form-buttons-container">
               <button type="submit" class="button button-apply-filters button-action">Применить</button>
