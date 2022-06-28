@@ -479,7 +479,7 @@ body {
  }
 
 .subscribe-form input[type=email]:focus-visible {
-  outline: none;
+  margin-right: 2px;
 }
 
 .subscribe-form input[type=email]:focus {
@@ -942,7 +942,6 @@ body {
   outline: 3px solid #83B3D3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
-
 
 .form-buttons-container {
   display: flex;
