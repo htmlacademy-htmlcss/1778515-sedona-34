@@ -159,6 +159,69 @@
       </svg>
     </a>
   </footer>
+
+  <div class="modal-wrapper ">
+    <div class="modal">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <button class="modal-close-button" type="button">
+        <svg width="13" height="13" aria-labelledby="close-btn" role="img">
+          <title id="close-btn">Закрыть окно.</title>
+          <use href="images/icons/modal.svg#close"></use>
+        </svg>
+      </button>
+      <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="modal-form-label date-label">
+          Дата заезда:
+          <input class="modal-form-input" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату" value="27 апреля 2020">
+          <span class="date-input-success">На эти даты есть свободные номера. Пока есть.</span>
+          <span class="date-input-error show-error">Мы не можем отправить вас в прошлое.</span>
+        </label>
+        <label class="modal-form-label date-label">
+          Дата Выезда:
+          <input class="modal-form-input" type="text" name="checkout-date" id="checkout" placeholder="Укажите дату" value="1 сентября 2021">
+          <span class="date-input-success show-success">На эти даты есть свободные номера. Пока есть.</span>
+          <span class="date-input-error">Мы не можем отправить вас в прошлое.</span>
+        </label>
+        <label class="modal-form-label adults-label" for="adults-quantity">Взрослые:</label>
+        <div class="modal-form-quantity-wrapper adults-wrapper">
+          <button class="quantity-button decrease-button" type="button">
+            <svg width="13" height="1" aria-labelledby="decrease-btn" role="img">
+              <title id="decrease-btn">Уменьшить количество</title>
+              <use href="images/icons/modal.svg#decrease"></use>
+            </svg>
+          </button>
+          <input class="quantity-input" type="number" name="adults-quantity" id="adults-quantity" placeholder="0" value="2" max="999">
+          <button class="quantity-button increase-button" type="button">
+            <svg width="13" height="13" aria-labelledby="increase-btn" role="img">
+              <title id="increase-btn">Увеличить количество</title>
+              <use href="images/icons/modal.svg#increase"></use>
+            </svg>
+          </button>
+        </div>
+        <label class="modal-form-label children-label" for="children-quantity">Дети:</label>
+        <button class="button-tooltip" type="button">
+          <svg width="1" height="9" aria-labelledby="tooltip-modal" role="img">
+            <title id="tooltip-modal">Информация</title>
+            <use href="images/icons/modal.svg#info"></use>
+          </svg>
+        </button>
+        <div class="modal-form-quantity-wrapper">
+          <button class="quantity-button decrease-button" type="button">
+            <svg width="13" height="1" aria-labelledby="decrease-btn" role="img">
+              <use href="images/icons/modal.svg#decrease"></use>
+            </svg>
+          </button>
+          <input class="quantity-input" type="number" name="children-quantity" id="children-quantity" placeholder="0" value="1" max="999">
+          <button class="quantity-button increase-button" type="button">
+            <svg width="13" height="13" aria-labelledby="increase-btn" role="img">
+              <use href="images/icons/modal.svg#increase"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="button button-modal-submit button-action" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
 </div>
 </body>
 </html>
