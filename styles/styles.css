@@ -171,11 +171,6 @@ body {
   max-width: 450px;
 }
 
-.navigation-user {
-  max-width: 350px;
-  margin-left: auto;
-}
-
 .navigation-list .navigation-item:not(:last-child) {
   margin-right: 34px;
 }
@@ -189,18 +184,23 @@ body {
   line-height: 26px;
 }
 
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
+  padding-bottom: 17px;
+}
+
 .navigation-link:hover {
   color: rgba(0, 0, 0, 0.51);
 }
 
 .navigation-link:focus {
-  outline: none;
+  outline: 3px solid #83B3D3;;
   color: rgba(0, 0, 0, 0.51);
 }
 
-.navigation-link-current {
-  border-bottom: 2px solid #756257;
-  padding-bottom: 17px;
+.navigation-user {
+  max-width: 350px;
+  margin-left: auto;
 }
 
 .favorite-link,
@@ -1241,6 +1241,7 @@ body {
 .modal-close-button:active {
   background-color: #E6E6E6;
 }
+
 .modal-close-button:active svg {
   opacity: 0.3;
 }
@@ -1321,23 +1322,27 @@ body {
   outline: 3px solid #83B3D3;
 }
 
-.date-input-success {
-  display: block;
-  position: relative;
+.date-input-message {
+  display: none;
+  position: absolute;
   left: 155px;
+  top: 57px;
+  max-width: 420px;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
 }
 
-.date-input-error {
-  display: block;
-  position: relative;
-  left: 155px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
+.error-message {
   color: #FF5757;
+}
+
+.show-success {
+  display: block;
+}
+
+.show-error {
+  display: block;
 }
 
 .modal-form-quantity-wrapper {
@@ -1408,13 +1413,64 @@ body {
   border-radius: 4px;
 }
 
-.button-tooltip {
+/*tooltip*/
+.tooltip {
+  display: inline-block;
+  position: absolute;
+  margin-left: 6px;
   width: 25px;
   height: 25px;
-  margin: 0 18px 0 6px;
+}
+
+.button-tooltip {
+  display: block;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: #83B3D3;
   border: none;
+}
+
+.button-tooltip:hover {
+  background-color: #68A2CA;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  background-color: #333333;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.button-tooltip:hover + .tooltip-text,
+.button-tooltip:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  top: -9px;
+  left: 46%;
+  background-image: url("../images/icons/tooltip-triangle.svg");
+  background-size: 19px 9px;
+}
+
+.children-wrapper {
+  margin-left: auto;
 }
 
 .button-modal-submit {
@@ -1423,4 +1479,8 @@ body {
   font-size: 20px;
   line-height: 36px;
   padding: 12px 0;
+}
+
+.button-modal-submit:focus {
+  outline: 3px solid #756257;
 }
