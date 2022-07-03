@@ -475,7 +475,7 @@ body {
  .subscribe-form input[type=email] {
    flex-grow: 1;
    font: inherit;
-   padding: 0 0 0 22px;
+   padding: 0 22px;
    background: #F2F2F2;
    border-radius: 10px 0 0 10px;
    border: none;
