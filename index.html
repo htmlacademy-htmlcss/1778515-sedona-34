@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -28,7 +29,7 @@
           <a class="navigation-link search-link" href="#">
             <svg width="19" height="19" aria-labelledby="search" role="img">
               <title id="search">Поиск</title>
-              <use href="/images/icons/header.svg#search"></use>
+              <use href="images/icons/header.svg#search"></use>
             </svg>
           </a>
         </li>
@@ -36,7 +37,7 @@
           <a class="navigation-link favorite-link" href="#">
             <svg width="19" height="19" aria-labelledby="favorite" role="img">
               <title id="favorite">Избранное</title>
-              <use href="/images/icons/header.svg#favorite"></use>
+              <use href="images/icons/header.svg#favorite"></use>
             </svg>
             <div class="favorite-count">12</div>
           </a>
@@ -67,8 +68,8 @@
                alt="Мотель в Седоне.">
           <ul class="advantages-sub-list">
             <li class="advantages-item advantage-home advantage-semi-blue-light">
-              <h3 class="advantages-sub-list-title">Жилье</h3>
-              <p class="advantages-description">Рекомендуем пожить<br> в внастоящем мотеле, всё как в кино!</p>
+              <h3 class="advantages-sub-list-title">Жильё</h3>
+              <p class="advantages-description">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
             </li>
             <li class="advantages-item advantage-food">
               <h3 class="advantages-sub-list-title">Еда</h3>
@@ -82,7 +83,7 @@
         </li>
         <li class="advantages-important-item">
           <div class="advantages-item advantages-important-item-content">
-            <h3 class="advantages-title">Там есть мост дьявола</h3>
+            <h3 class="advantages-title">Там есть<br>мост дьявола</h3>
             <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </div>
           <img class="advantages-image" src="images/advantage-image-2.jpg" width="800" height="384" alt="Мост Дьявола.">
@@ -103,13 +104,13 @@
     </section>
     <section class="offer" id="offer">
       <h2 class="offer-title">Заинтересовались?</h2>
-      <p class="offer-description">Укажите предполагаемые даты поездки,<br>
-        и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="offer-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне
+      </p>
       <a class="button button-offer button-redirect" href="catalog.html">Поиск гостиницы в Седоне</a>
     </section>
     <section class="subscribe">
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-      <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="email">e-mail</label>
         <input type="email" class="subscribe-form-email-input" id="email" name="email" placeholder="Ваш e-mail">
@@ -125,7 +126,7 @@
           <a class="footer-contacts-link" href="https://vk.com/htmlacademy">
             <svg width="24" height="15" aria-labelledby="vk-title" role="img">
               <title id="vk-title">Вконтакте</title>
-              <use href="/images/icons/footer-social.svg#vk"></use>
+              <use href="images/icons/footer-social.svg#vk"></use>
             </svg>
           </a>
         </li>
@@ -133,7 +134,7 @@
           <a class="footer-contacts-link" href="https://t.me/htmlacademy">
             <svg width="18" height="17" aria-labelledby="telegram-title" role="img">
               <title id="telegram-title">Телеграм</title>
-              <use href="/images/icons/footer-social.svg#telegram"></use>
+              <use href="images/icons/footer-social.svg#telegram"></use>
             </svg>
           </a>
         </li>
@@ -141,7 +142,7 @@
           <a class="footer-contacts-link" href="https://www.youtube.com/user/htmlacademyru">
             <svg width="22" height="17" aria-labelledby="youtube-title" role="img">
               <title id="youtube-title">Ютуб канал</title>
-              <use href="/images/icons/footer-social.svg#youtube"></use>
+              <use href="images/icons/footer-social.svg#youtube"></use>
             </svg>
           </a>
         </li>
@@ -159,6 +160,75 @@
       </svg>
     </a>
   </footer>
+
+  <div class="modal-wrapper">
+    <div class="modal">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <button class="modal-close-button" type="button">
+        <svg width="13" height="13" aria-labelledby="close-btn" role="img">
+          <title id="close-btn">Закрыть окно.</title>
+          <use href="images/icons/modal.svg#close"></use>
+        </svg>
+      </button>
+      <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="modal-form-label date-label">
+          Дата Заезда:
+          <input class="modal-form-input" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату" value="27 апреля 2020">
+          <span class="date-input-message">На эти даты есть свободные номера. Пока есть.</span>
+          <span class="date-input-message error-message show-error">Мы не можем отправить вас в прошлое.</span>
+        </label>
+        <label class="modal-form-label date-label">
+          Дата Выезда:
+          <input class="modal-form-input" type="text" name="checkout-date" id="checkout" placeholder="Укажите дату" value="1 сентября 2021">
+          <span class="date-input-message show-success">На эти даты есть свободные номера. Пока есть.</span>
+          <span class="date-input-message error-message">Мы не можем отправить вас в прошлое.</span>
+        </label>
+        <label class="modal-form-label adults-label" for="adults-quantity">Взрослые:</label>
+        <div class="modal-form-quantity-wrapper adults-wrapper">
+          <button class="quantity-button decrease-button" type="button">
+            <svg width="13" height="1" aria-labelledby="decrease-btn" role="img">
+              <title id="decrease-btn">Уменьшить количество</title>
+              <use href="images/icons/modal.svg#decrease"></use>
+            </svg>
+          </button>
+          <input class="quantity-input" type="number" name="adults-quantity" id="adults-quantity" placeholder="0" value="2" max="999">
+          <button class="quantity-button increase-button" type="button">
+            <svg width="13" height="13" aria-labelledby="increase-btn" role="img">
+              <title id="increase-btn">Увеличить количество</title>
+              <use href="images/icons/modal.svg#increase"></use>
+            </svg>
+          </button>
+        </div>
+        <span class="modal-form-label">
+          <label class="modal-form-label children-label" for="children-quantity">Дети:</label>
+          <span class="tooltip">
+            <button class="button-tooltip" type="button" aria-labelledby="tooltip-info">
+              <svg width="1" height="9" aria-hidden="true" focusable="false" role="img">
+                <use href="images/icons/modal.svg#info"></use>
+              </svg>
+            </button>
+            <span class="tooltip-text" id="tooltip-info">Укажите количество детей,
+            которые будут с вами, возраст которых от 6 до 18 лет.
+            Дети до 6 лет размещаются бесплатно.</span>
+          </span>
+        </span>
+        <div class="modal-form-quantity-wrapper children-wrapper">
+          <button class="quantity-button decrease-button" type="button">
+            <svg width="13" height="1" aria-labelledby="decrease-btn" role="img">
+              <use href="images/icons/modal.svg#decrease"></use>
+            </svg>
+          </button>
+          <input class="quantity-input" type="number" name="children-quantity" id="children-quantity" placeholder="0" value="1" max="999">
+          <button class="quantity-button increase-button" type="button">
+            <svg width="13" height="13" aria-labelledby="increase-btn" role="img">
+              <use href="images/icons/modal.svg#increase"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="button button-modal-submit button-action" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
 </div>
 </body>
 </html>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -26,12 +27,19 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-user-item">
             <a class="navigation-link search-link" href="#">
-              <span class="visually-hidden">Поиск</span>
+              <svg width="19" height="19" aria-labelledby="search" role="img">
+                <title id="search">Поиск</title>
+                <use href="images/icons/header.svg#search"></use>
+              </svg>
             </a>
           </li>
           <li class="navigation-user-item">
             <a class="navigation-link favorite-link" href="#">
-              <span class="visually-hidden">Избранное</span>
+              <svg width="19" height="19" aria-labelledby="favorite" role="img">
+                <title id="favorite">Избранное</title>
+                <use href="images/icons/header.svg#favorite"></use>
+              </svg>
+              <div class="favorite-count">12</div>
             </a>
           </li>
           <li class="navigation-user-item">
@@ -53,55 +61,86 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Гостиницы</a>
+            <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ol>
         <section class="catalog-filters">
           <h2 class="visually-hidden">Фильтры</h2>
           <form class="catalog-filters-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filters-group-infrastructure">
+            <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
               <legend class="catalog-filter-title">Инфраструктура</legend>
               <ul class="catalog-filter-list ">
                 <li class="catalog-filter-item">
-                  <input class="control-input" type="checkbox" name="pool" id="pool" checked>
-                  <label for="pool">Бассеин</label>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Бассейн</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="control-input" type="checkbox" name="parking" id="parking" checked>
-                  <label for="parking">Паркинг</label>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Парковка</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="control-input" type="checkbox" name="wifi" id="wifi">
-                  <label for="wifi">Wi-Fi</label>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="checkbox" name="wifi">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Wi-Fi</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="catalog-filters-group-type">
+            <fieldset class="catalog-filter-group catalog-filter-group-type">
               <legend class="catalog-filter-title">Тип Жилья</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <input class="control-input" type="radio" name="type" id="hotel" value="hotel" checked>
-                  <label for="hotel">Гостиница</label>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="type" value="hotel" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Гостиница</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="control-input" type="radio" name="type" id="motel" value="motel">
-                  <label for="motel">Мотель</label>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="type" value="motel">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Мотель</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="control-input" type="radio" name="type" id="apartment" value="apartment">
-                  <label for="apartment">Апартаменты</label>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="type" value="apartment">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Апартаменты</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="catalog-filters-group-price">
+            <fieldset class="catalog-filter-group catalog-filter-group-price">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <input type="text" name="min-price" id="min-price" placeholder="от" value="0">
-              <label for="min-price" class="visually-hidden">Минимальная цена</label>
-              <input type="text" name="max-price" id="max-price" placeholder="до" value="9000">
-              <label for="max-price" class="visually-hidden">Максимальная цена</label>
-              <input type="range" class="catalog-filter-slider" name="range-price" id="range-price" min="0" max="12000"
-                     value="9000">
-              <label for="range-price" class="visually-hidden">Слайдер выбора цены</label>
+              <div class="controls-price-wrapper">
+                <label class="control-min-price">
+                  <input class="control-price-input" type="number" name="min-price" value="0" placeholder="0">
+                  <span class="control-price-label">от</span>
+                </label>
+                <label class="control-max-price">
+                  <input class="control-price-input" type="number" name="max-price" value="9000" placeholder="9000">
+                  <span class="control-price-label">до</span>
+                </label>
+              </div>
+              <div class="range-price-wrapper">
+                <input class="control-price-range" type="range" name="range-price" id="range-price-min"
+                       min="0" max="11000"
+                       value="0">
+                <label for="range-price-min" class="visually-hidden">Минимальная цена</label>
+                <input class="control-price-range price-max" type="range" name="range-price" id="range-price-max"
+                       min="0" max="11000"
+                       value="9000">
+                <label for="range-price-max" class="visually-hidden">Максимальная цена</label>
+              </div>
             </fieldset>
             <div class="form-buttons-container">
               <button type="submit" class="button button-apply-filters button-action">Применить</button>
@@ -123,7 +162,7 @@
               <a class="button-view table-view-button view-current" href="#">
                 <svg width="16" height="14" aria-labelledby="view-table" role="img">
                   <title id="view-table">Показать карточки</title>
-                  <use href="/images/icons/catalog-view.svg#table"></use>
+                  <use href="images/icons/catalog-view.svg#table"></use>
                 </svg>
               </a>
             </li>
@@ -131,7 +170,7 @@
               <a class="button-view slider-view-button" href="#">
                 <svg width="16" height="14" aria-labelledby="view-slider" role="img">
                   <title id="view-slider">Показать слайдер</title>
-                  <use href="/images/icons/catalog-view.svg#slider"></use>
+                  <use href="images/icons/catalog-view.svg#slider"></use>
                 </svg>
               </a>
             </li>
@@ -139,7 +178,7 @@
               <a class="button-view list-view-button" href="#">
                 <svg width="16" height="14" aria-labelledby="view-list" role="img">
                   <title id="view-list">Показать лист</title>
-                  <use href="/images/icons/catalog-view.svg#list"></use>
+                  <use href="images/icons/catalog-view.svg#list"></use>
                 </svg>
                 <span class="visually-hidden">Показать список</span>
               </a>
@@ -163,16 +202,16 @@
             <button class="button button-action" type="button">в избранное</button>
             <div class="hotel-card-star-rating" aria-label="Рейтинг гостиницы 4 звезды.">
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
             </div>
             <b class="hotel-card-rating">Рейтинг: 8,5</b>
@@ -191,16 +230,16 @@
             <button class="button button-selected" type="button">в избранном</button>
             <div class="hotel-card-star-rating" aria-label="Рейтинг гостиницы 4 звезды.">
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
             </div>
             <b class="hotel-card-rating">Рейтинг: 9,2</b>
@@ -219,13 +258,13 @@
             <button class="button button-action" type="button">в избранное</button>
             <div class="hotel-card-star-rating" aria-label="Рейтинг гостиницы 3 звезды.">
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
             </div>
             <b class="hotel-card-rating">Рейтинг: 6,9</b>
@@ -244,10 +283,10 @@
             <button class="button button-action" type="button">в избранное</button>
             <div class="hotel-card-star-rating" aria-label="Рейтинг гостиницы 2 звезды.">
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
               <svg class="rating-star" width="18" height="17" aria-hidden="true" focusable="false" role="img">
-                <use href="/images/icons/rating.svg#star"></use>
+                <use href="images/icons/rating.svg#star"></use>
               </svg>
             </div>
             <b class="hotel-card-rating">Рейтинг: 5,0</b>
@@ -255,7 +294,8 @@
         </ul>
       </section>
       <div class="decoration-line"></div>
-      <div class="catalog-pages-controls">
+      <section class="catalog-pages-controls">
+        <h2 class="visually-hidden">Выбор страницы.</h2>
         <ul class="catalog-pagination">
           <li class="catalog-pagination-item">
             <a class="button pagination-button current-page" href="#">1</a>
@@ -280,13 +320,13 @@
         </ul>
         <div class="catalog-amount-controls">
           <span class="catalog-hotels-amount-text">Гостиниц на странице:</span>
-          <select class="catalog-select hotels-amount-select" aria-label="Количество гостиниц на странице">
+          <select class="catalog-select hotels-amount-select" aria-label="Количество гостиниц на странице.">
             <option value="4">4</option>
             <option value="8">8</option>
             <option value="16">16</option>
           </select>
         </div>
-      </div>
+      </section>
       <section class="subscribe catalog-subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -305,7 +345,7 @@
             <a class="footer-contacts-link" href="https://vk.com/htmlacademy">
               <svg width="24" height="15" aria-labelledby="vk-title" role="img">
                 <title id="vk-title">Вконтакте</title>
-                <use href="/images/icons/footer-social.svg#vk"></use>
+                <use href="images/icons/footer-social.svg#vk"></use>
               </svg>
             </a>
           </li>
@@ -313,7 +353,7 @@
             <a class="footer-contacts-link" href="https://t.me/htmlacademy">
               <svg width="18" height="17" aria-labelledby="telegram-title" role="img">
                 <title id="telegram-title">Телеграм</title>
-                <use href="/images/icons/footer-social.svg#telegram"></use>
+                <use href="images/icons/footer-social.svg#telegram"></use>
               </svg>
             </a>
           </li>
@@ -321,7 +361,7 @@
             <a class="footer-contacts-link" href="https://www.youtube.com/user/htmlacademyru">
               <svg width="22" height="17" aria-labelledby="youtube-title" role="img">
                 <title id="youtube-title">Ютуб канал</title>
-                <use href="/images/icons/footer-social.svg#youtube"></use>
+                <use href="images/icons/footer-social.svg#youtube"></use>
               </svg>
             </a>
           </li>
