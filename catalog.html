@@ -81,7 +81,7 @@
                   <label class="control">
                     <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
                     <span class="control-mark"></span>
-                    <span class="control-label">Паркинг</span>
+                    <span class="control-label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
@@ -133,11 +133,11 @@
               </div>
               <div class="range-price-wrapper">
                 <input class="control-price-range" type="range" name="range-price" id="range-price-min"
-                       min="0" max="12000"
+                       min="0" max="11000"
                        value="0">
                 <label for="range-price-min" class="visually-hidden">Минимальная цена</label>
                 <input class="control-price-range price-max" type="range" name="range-price" id="range-price-max"
-                       min="0" max="12000"
+                       min="0" max="11000"
                        value="9000">
                 <label for="range-price-max" class="visually-hidden">Максимальная цена</label>
               </div>
@@ -294,7 +294,8 @@
         </ul>
       </section>
       <div class="decoration-line"></div>
-      <div class="catalog-pages-controls">
+      <section class="catalog-pages-controls">
+        <h2 class="visually-hidden">Выбор страницы.</h2>
         <ul class="catalog-pagination">
           <li class="catalog-pagination-item">
             <a class="button pagination-button current-page" href="#">1</a>
@@ -319,13 +320,13 @@
         </ul>
         <div class="catalog-amount-controls">
           <span class="catalog-hotels-amount-text">Гостиниц на странице:</span>
-          <select class="catalog-select hotels-amount-select" aria-label="Количество гостиниц на странице">
+          <select class="catalog-select hotels-amount-select" aria-label="Количество гостиниц на странице.">
             <option value="4">4</option>
             <option value="8">8</option>
             <option value="16">16</option>
           </select>
         </div>
-      </div>
+      </section>
       <section class="subscribe catalog-subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
