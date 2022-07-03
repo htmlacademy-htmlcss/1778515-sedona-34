@@ -67,6 +67,7 @@ body {
   min-width: 60px;
   max-width: 574px;
   padding: 9px 0;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -245,6 +246,7 @@ body {
   margin-top: 14px;
   margin-bottom: 13px;
   margin-left: 20px;
+  padding-bottom: 8px;
 }
 
 /*index*/
@@ -269,10 +271,10 @@ body {
   position: absolute;
   width: 1200px;
   height: 57px;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   background-color: #fff;
-  clip-path: polygon(0 100%, 0 0, 20% 42%, 20% 0, 50% 100%, 79% 0, 79% 42%, 100% 0, 100% 100%);
+  clip-path: polygon(0 100%, 0 0, 20.87% 42%, 20.87% 0, 50% 100%, 79.2% 0, 79.2% 42%, 100% 0, 101% 100%);
 }
 
 .welcome-logo {
@@ -326,7 +328,7 @@ body {
   align-items: center;
   width: 400px;
   min-height: 384px;
-  padding: 50px 50px;
+  padding: 80px 50px 81px;
 }
 
 .advantages-important-item {
@@ -374,6 +376,7 @@ body {
    content: "";
    background-image: url("../images/icons/advantage-home-icon.svg");
    background-size: 75px 72px;
+   background-repeat: no-repeat;
    width: 75px;
    height: 72px;
    margin: 0 auto 30px;
@@ -382,8 +385,9 @@ body {
  .advantage-food:before {
    content: "";
    background-image: url("../images/icons/advantage-burger-icon.svg");
-   background-size: 75px 72px;
-   width: 75px;
+   background-size: 76px 72px;
+   background-repeat: no-repeat;
+   width: 76px;
    height: 72px;
    margin: 0 auto 30px;
  }
@@ -391,10 +395,11 @@ body {
  .advantage-present:before {
    content: "";
    background-image: url("../images/icons/advantage-present-icon.svg");
-   background-size: 75px 72px;
-   width: 75px;
-   height: 72px;
-   margin: 0 auto 30px;
+   background-size: 78px 76px;
+   background-repeat: no-repeat;
+   width: 78px;
+   height: 76px;
+   margin: 0 auto 27px;
  }
 
  .advantages-description {
@@ -435,6 +440,7 @@ body {
    font-size: 20px;
    line-height: 36px;
    margin:  0 auto 93px;
+   padding: 12px 0;
  }
 
  .subscribe {
@@ -457,7 +463,9 @@ body {
  .subscribe-description {
    display: block;
    margin: 0 auto 46px;
-   max-width: 446px;
+   max-width: 470px;
+   font-size: 22px;
+   line-height: 26px;
  }
 
  .subscribe-form {
@@ -1438,11 +1446,11 @@ body {
 .tooltip-text {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 42px;
   left: 50%;
   transform: translateX(-50%);
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 15px 18px 23px 22px;
   background-color: #333333;
   color: #fff;
   font-weight: 400;
