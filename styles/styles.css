@@ -372,6 +372,10 @@ body {
    text-transform: uppercase;
  }
 
+ .advantage-home .advantages-description {
+   padding: 0 27px;
+ }
+
  .advantage-home:before {
    content: "";
    background-image: url("../images/icons/advantage-home-icon.svg");
