@@ -420,6 +420,10 @@ body {
    background-color: rgba(131, 179, 211, 0.2);
  }
 
+ .offer {
+   padding: 0 40px;
+ }
+
  .offer-title {
    margin: 0 0 29px 0;
    padding: 0;
@@ -561,6 +565,7 @@ body {
 
 .phone-number-link {
   display: block;
+  max-width: 600px;
   padding: 5px 0;
   text-decoration: none;
   color: #000000;
@@ -741,6 +746,8 @@ body {
 
 .control-input:disabled:hover + .control-mark {
   background-color: #919191;
+  pointer-events: none;
+  cursor: none;
 }
 
 .catalog-filter-title {
@@ -809,6 +816,7 @@ body {
   height: 100%;
   padding: 0 14px 0 17px;
   border: 2px solid #FFFFFF;
+  cursor: pointer;
 }
 
 .control-min-price {
@@ -903,20 +911,22 @@ body {
 
 .control-price-range::-moz-range-thumb {
   -moz-appearance: none;
-  pointer-events: auto;
-  border: none;
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
   background-color: #ffffff;
   border-radius: 5px;
 }
 
 .control-price-range::-webkit-slider-thumb {
   appearance: none;
-  pointer-events: auto;
-  border: none;
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
   background-color: #ffffff;
   border-radius: 5px;
 }
@@ -1006,7 +1016,8 @@ body {
   appearance: none;
   min-width: 160px;
   height: 49px;
-  padding:0 20px ;
+  padding:0 20px;
+  margin-right: 10px;
   font: inherit;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1149,6 +1160,7 @@ body {
 /*pagination*/
 .catalog-pages-controls {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 72px 25px;
   justify-content: space-between;
 }
@@ -1166,6 +1178,7 @@ body {
 }
 
 .pagination-button {
+  max-width: 150px;
   padding: 12px;
   font-size: 20px;
   line-height: 36px;
@@ -1180,6 +1193,7 @@ body {
 /*amount-controls*/
 .catalog-amount-controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -1193,6 +1207,10 @@ body {
   background-image: none;
   background-color: inherit;
   color: #000000;
+}
+
+.hotels-amount-select {
+  max-width: 400px;
 }
 
 /*modal*/
@@ -1327,6 +1345,10 @@ body {
   outline: 3px solid #83B3D3;
 }
 
+.modal-form-input:disabled {
+  opacity: 0.2;
+}
+
 .date-input-message {
   display: none;
   position: absolute;
@@ -1377,6 +1399,10 @@ body {
 
 .quantity-input:focus {
   outline: 3px solid #83B3D3;
+}
+
+.quantity-input:disabled {
+  opacity: 0.2;
 }
 
 /*remove default arrows*/
