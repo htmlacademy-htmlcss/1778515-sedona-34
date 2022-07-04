@@ -732,11 +732,11 @@ body {
   background-color: #3F5E72;
 }
 
-.catalog-filter-group-infrastructure .control:hover .control-mark {
+.control-checkbox:hover .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.catalog-filter-group-infrastructure .control:active .control-mark {
+.control-checkbox:active .control-mark {
   background-color:  rgba(255, 255, 255, 0.3);
 }
 
