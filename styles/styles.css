@@ -47,7 +47,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   background-color: #E5E5E5;
-  color:#000;
+  color:#000000;
   height: 100%;
   counter-reset: advantage-count;
 }
@@ -57,7 +57,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
   min-height: 100%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -216,7 +216,7 @@ body {
 }
 
 .navigation-link svg {
-  fill: #000;
+  fill: #000000;
 }
 
 .navigation-link:hover svg,
@@ -237,12 +237,12 @@ body {
   line-height: 13px;
   font-weight: 400;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   padding-top: 3px;
 }
 
 .navigation-user .button {
-  min-width: 160px;
+  width: 160px;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-left: 20px;
@@ -273,7 +273,7 @@ body {
   height: 57px;
   bottom: -1px;
   left: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   clip-path: polygon(0 100%, 0 0, 20.87% 42%, 20.87% 0, 50% 100%, 79.2% 0, 79.2% 42%, 100% 0, 101% 100%);
 }
 
@@ -308,7 +308,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  background-color: #fff;
+  background-color: #ffffff;
   list-style: none;
 }
 
@@ -420,6 +420,10 @@ body {
    background-color: rgba(131, 179, 211, 0.2);
  }
 
+ .offer {
+   padding: 0 40px;
+ }
+
  .offer-title {
    margin: 0 0 29px 0;
    padding: 0;
@@ -475,7 +479,7 @@ body {
  .subscribe-form input[type=email] {
    flex-grow: 1;
    font: inherit;
-   padding: 0 0 0 22px;
+   padding: 0 22px;
    background: #F2F2F2;
    border-radius: 10px 0 0 10px;
    border: none;
@@ -504,6 +508,7 @@ body {
 
  .button-subscribe {
    min-width: 200px;
+   max-width: 300px;
    padding: 12px 0;
    font-size: 20px;
    line-height: 36px;
@@ -560,9 +565,10 @@ body {
 
 .phone-number-link {
   display: block;
+  max-width: 600px;
   padding: 5px 0;
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 .phone-number-link:hover,
@@ -580,7 +586,7 @@ body {
 }
 
 .footer-html-academy-link svg {
-  fill: #000;
+  fill: #000000;
 }
 
 .footer-html-academy-link:hover svg,
@@ -601,7 +607,7 @@ body {
   background-repeat: no-repeat;
   background-color: #396487;
   background-size: cover;
-  color: #fff;
+  color: #ffffff;
 }
 
 .catalog-title {
@@ -643,7 +649,7 @@ body {
 }
 
 .breadcrumbs-link:focus {
-  color: #fff;
+  color: #ffffff;
 }
 
 .breadcrumbs-link:active {
@@ -656,7 +662,7 @@ body {
 }
 
 .breadcrumbs-link svg {
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .breadcrumbs-link:hover svg {
@@ -664,7 +670,7 @@ body {
 }
 
 .breadcrumbs-link:focus svg {
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .breadcrumbs-link:active svg {
@@ -697,7 +703,7 @@ body {
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 4px;
 }
 
@@ -740,6 +746,8 @@ body {
 
 .control-input:disabled:hover + .control-mark {
   background-color: #919191;
+  pointer-events: none;
+  cursor: none;
 }
 
 .catalog-filter-title {
@@ -808,6 +816,7 @@ body {
   height: 100%;
   padding: 0 14px 0 17px;
   border: 2px solid #FFFFFF;
+  cursor: pointer;
 }
 
 .control-min-price {
@@ -876,7 +885,7 @@ body {
   position: relative;
   width: 288px;
   height: 20px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0, #fff 0, #fff 81%, rgba(255, 255, 255, 0.3) 81%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0, #ffffff 0, #ffffff 81%, rgba(255, 255, 255, 0.3) 81%);
   background-size: 100% 4px;
   background-repeat: no-repeat;
   background-position: center;
@@ -902,21 +911,23 @@ body {
 
 .control-price-range::-moz-range-thumb {
   -moz-appearance: none;
-  pointer-events: auto;
-  border: none;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
 .control-price-range::-webkit-slider-thumb {
   appearance: none;
-  pointer-events: auto;
-  border: none;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
@@ -962,6 +973,7 @@ body {
 .button-apply-filters {
   background-color: #82B3D3;
   min-width: 160px;
+  max-width: 200px;
   padding: 14px 0;
 }
 
@@ -1004,7 +1016,8 @@ body {
   appearance: none;
   min-width: 160px;
   height: 49px;
-  padding:0 20px ;
+  padding:0 20px;
+  margin-right: 10px;
   font: inherit;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1055,11 +1068,11 @@ body {
 }
 
 .button-view:hover {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .button-view:active {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .button-view:focus {
@@ -1068,7 +1081,7 @@ body {
 }
 
 .view-current {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 /*hotels cards list*/
@@ -1104,7 +1117,7 @@ body {
   display: block;
   padding: 0;
   text-decoration: 0;
-  color: #000;
+  color: #000000;
   grid-column: 1 / -1;
 }
 
@@ -1147,6 +1160,7 @@ body {
 /*pagination*/
 .catalog-pages-controls {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 72px 25px;
   justify-content: space-between;
 }
@@ -1164,6 +1178,7 @@ body {
 }
 
 .pagination-button {
+  max-width: 150px;
   padding: 12px;
   font-size: 20px;
   line-height: 36px;
@@ -1172,12 +1187,13 @@ body {
 
 .current-page {
   background-color: #F2F2F2;
-  color: #000;
+  color: #000000;
 }
 
 /*amount-controls*/
 .catalog-amount-controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -1190,7 +1206,11 @@ body {
   text-align: center;
   background-image: none;
   background-color: inherit;
-  color: #000;
+  color: #000000;
+}
+
+.hotels-amount-select {
+  max-width: 400px;
 }
 
 /*modal*/
@@ -1214,7 +1234,7 @@ body {
   margin: auto;
   width: 715px;
   padding: 62px 70px 70px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
 }
@@ -1255,7 +1275,7 @@ body {
 }
 
 .modal-close-button svg {
-  fill: #000;
+  fill: #000000;
 }
 
 .modal-form {
@@ -1307,7 +1327,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   padding-left: 19px;
-  color: #000;
+  color: #000000;
 }
 
 .modal-form-input:hover {
@@ -1316,13 +1336,17 @@ body {
 
 .modal-form-input:focus:not(:placeholder-shown) {
   outline: none;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 2px solid #000000;
 }
 
 .modal-form-input:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
+}
+
+.modal-form-input:disabled {
+  opacity: 0.2;
 }
 
 .date-input-message {
@@ -1375,6 +1399,10 @@ body {
 
 .quantity-input:focus {
   outline: 3px solid #83B3D3;
+}
+
+.quantity-input:disabled {
+  opacity: 0.2;
 }
 
 /*remove default arrows*/
@@ -1447,7 +1475,7 @@ body {
   width: 256px;
   padding: 15px 18px 23px 22px;
   background-color: #333333;
-  color: #fff;
+  color: #ffffff;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
