@@ -1211,6 +1211,7 @@ body {
 
 .hotels-amount-select {
   max-width: 400px;
+  margin-right: 0;
 }
 
 /*modal*/
