@@ -113,7 +113,7 @@
       <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="email">e-mail</label>
-        <input type="email" class="subscribe-form-email-input" id="email" name="email" placeholder="Ваш e-mail">
+        <input class="subscribe-form-email-input" type="email"  id="email" name="email" placeholder="Ваш e-mail" required>
         <button type="submit" class="button button-subscribe button-action">Подписаться</button>
       </form>
     </section>
@@ -173,13 +173,13 @@
       <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="modal-form-label date-label">
           Дата Заезда:
-          <input class="modal-form-input" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату" value="27 апреля 2020">
+          <input class="modal-form-input" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату" value="27 апреля 2020" required>
           <span class="date-input-message">На эти даты есть свободные номера. Пока есть.</span>
           <span class="date-input-message error-message show-error">Мы не можем отправить вас в прошлое.</span>
         </label>
         <label class="modal-form-label date-label">
           Дата Выезда:
-          <input class="modal-form-input" type="text" name="checkout-date" id="checkout" placeholder="Укажите дату" value="1 сентября 2021">
+          <input class="modal-form-input" type="text" name="checkout-date" id="checkout" placeholder="Укажите дату" value="1 сентября 2021" required>
           <span class="date-input-message show-success">На эти даты есть свободные номера. Пока есть.</span>
           <span class="date-input-message error-message">Мы не можем отправить вас в прошлое.</span>
         </label>
@@ -191,7 +191,7 @@
               <use href="images/icons/modal.svg#decrease"></use>
             </svg>
           </button>
-          <input class="quantity-input" type="number" name="adults-quantity" id="adults-quantity" placeholder="0" value="2" max="999">
+          <input class="quantity-input" type="number" name="adults-quantity" id="adults-quantity" placeholder="0" value="2" max="999" required>
           <button class="quantity-button increase-button" type="button">
             <svg width="13" height="13" aria-labelledby="increase-btn" role="img">
               <title id="increase-btn">Увеличить количество</title>
@@ -218,7 +218,7 @@
               <use href="images/icons/modal.svg#decrease"></use>
             </svg>
           </button>
-          <input class="quantity-input" type="number" name="children-quantity" id="children-quantity" placeholder="0" value="1" max="999">
+          <input class="quantity-input" type="number" name="children-quantity" id="children-quantity" placeholder="0" value="1" max="999" required>
           <button class="quantity-button increase-button" type="button">
             <svg width="13" height="13" aria-labelledby="increase-btn" role="img">
               <use href="images/icons/modal.svg#increase"></use>
