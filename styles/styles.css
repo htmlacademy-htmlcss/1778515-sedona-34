@@ -414,6 +414,8 @@ body {
 
  .advantages-image {
    display: block;
+   height: auto;
+   object-fit: cover;
  }
 
  .advantage-semi-blue-light {
@@ -480,7 +482,7 @@ body {
    display: flex;
  }
 
- .subscribe-form input[type=email] {
+.subscribe-form-email-input {
    flex-grow: 1;
    font: inherit;
    padding: 0 22px;
@@ -489,23 +491,23 @@ body {
    border: none;
  }
 
-.subscribe-form input[type=email]::placeholder {
+.subscribe-form-email-input::placeholder {
   font: inherit;
  }
 
-.subscribe-form input[type=email]:hover {
+.subscribe-form-email-input:hover {
   background-color: #e6e6e6e8;
  }
 
-.subscribe-form input[type=email]:focus-visible {
+.subscribe-form-email-input:focus-visible {
   margin-right: 2px;
 }
 
-.subscribe-form input[type=email]:focus {
+.subscribe-form-email-input:focus {
   background-color: #e6e6e6e8;
  }
 
-.subscribe-form input[type=email]:disabled {
+.subscribe-form-email-input:disabled {
   background-color: rgba(196, 196, 196, 0.64);
   color: black;
  }
@@ -569,7 +571,7 @@ body {
 
 .phone-number-link {
   display: block;
-  max-width: 600px;
+  max-width: 335px;
   padding: 5px 0;
   text-decoration: none;
   color: #000000;
